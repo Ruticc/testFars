@@ -1,0 +1,30 @@
+---
+title: "Explanation_FARSFunctions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explanation_FARSFunctions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(testFars)
+```
+
+
+### BASICS
+
+This package is intended to facilitate the use of information on fatality available via the website of the [Fatality Analysis Reporting System (FARS)](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars). It allows then plotting the location of fatalities per year and state as wished by the user.
+
+The package consists of five relatively simple functions, three of them are used internally by the two functions that are available for the general user. The use of these two functions is then explained in this simple tutorial. 
+
+#### fars_summarize_years
+
+This is the first function which produces a table with how many fatalities occurred in (a) specific year (s) provided as parameter by the user. The function summarizes the information by month.

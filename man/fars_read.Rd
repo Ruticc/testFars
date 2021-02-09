@@ -6,19 +6,19 @@
 \usage{
 fars_read(filename)
 }
+\arguments{
+\item{filename}{The name of the file that needs to be read.}
+}
+\value{
+it returns the datafile that has been read transformed into a tibble
+}
 \description{
 This is an internal simple function that reads a file when it exists and it converts it into a tibble
 }
-\details{
-@param filename The name of the file that needs to be read.
-
- @return it returns the datafile that has been read transformed into a tibble
- @importFrom dplyr tbl_df
- @importFrom readr read_csv
-
- @examples
-fars_read(\code{filename})
-}
 \note{
 if the function is provided a filename that is not available it returns an error. One needs to be sure that one is in the right directory or that the provided filenames exist.
+}
+\examples{
+fars_read(\code{filename})
+
 }

@@ -6,19 +6,21 @@
 \usage{
 fars_summarize_years(years)
 }
-\description{
-@param years it is a vector of the years for which the data will be read and summarized
+\arguments{
+\item{years}{it is a vector of the years for which the data will be read and summarized}
 }
-\details{
-@return a tibble in which the first column is the variable MONTH indicated by a number from 1:12, and each subsequent column corresponds to a variable with the name of the year provided int he parameter. In this case each of the years include data forthe number of fatalitis per month
-	@importFrom dplyr bind_rows group_by summarize
- @importFrom tidyr spread
-
- @examples
-fars_summarize_years(c(2013:2015))
-fars_summarize_years(2013)
-fars_summarize_years(c(2014,2025))
+\value{
+a tibble in which the first column is the variable MONTH indicated by a number from 1:12, and each subsequent column corresponds to a variable with the name of the year provided int he parameter. In this case each of the years include data forthe number of fatalitis per month
+}
+\description{
+fars_summarize_years is a function that summarizes in the format of a table how many fatalities were registered per month and year, and the years for which the data is summarized is provided as a parameter
 }
 \note{
 when the year is not available in the dataset it will produce a warning and just produce the exported tibble with the valid years.
+}
+\examples{
+fars_summarize_years(c(2013:2015))
+fars_summarize_years(2013)
+fars_summarize_years(c(2014,2025))
+
 }

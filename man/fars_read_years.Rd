@@ -6,19 +6,19 @@
 \usage{
 fars_read_years(years)
 }
+\arguments{
+\item{years}{it is a vector of the years for which the data will be read}
+}
+\value{
+a list in which elemnt is a tibble for each year containing MONTH and year (each row is a fatality).
+}
 \description{
 This is an internal function that reads for each year provided in the parameter years the data, creates a variable called year for each data that is read which receives the corresponding year and selects the columns MONTH and year.
 }
-\details{
-@param years it is a vector of the years for which the data will be read
-
- @return a list in which elemnt is a tibble for each year containing MONTH and year (each row is a fatality).
-	@importFrom dplyr select mutate
-
- @examples
-fars_read_years(c(2014,2013))
-fars_read_years(c(2014,2025)) # the second element will be NULL
-}
 \note{
 if the provided year is not a number but a string for example or it is not available (a year in the future) the function returns invalid year and can not read the data it returns an empty value for that list element
+}
+\examples{
+fars_read_years(c(2014,2013))
+fars_read_years(c(2014,2025)) # the second element will be NULL
 }

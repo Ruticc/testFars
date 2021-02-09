@@ -6,14 +6,17 @@
 \usage{
 make_filename(year)
 }
+\arguments{
+\item{year}{The only parameter of this function is is the year for which the datafile name will be creatd}
+}
+\value{
+a string name that includes the year but it is specifically containing a string starting with "accident" and it is a compressed bz2 csv file"
+}
 \description{
 This is an internal simple function that produces and export a name for the file specifically indicated for the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System,
 }
-\details{
-@param year The only parameter of this function is is the year for which the datafile name will be creatd
-
- @return a string name that includes the year but it is specifically containing a string starting with "accident" and it is a compressed bz2 csv file"
-
- @examples
+\examples{
 make_filename(2016)
+
+
 }
