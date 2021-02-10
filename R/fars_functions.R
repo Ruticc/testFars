@@ -64,15 +64,19 @@ make_filename <- function(year) {
 fars_read_years <- function(years) {
         lapply(years, function(year) {
                 file <- make_filename(year)
+
                 MONTH <- NULL
                 tryCatch({
                         dat <- fars_read(file)
+
                         dplyr::mutate(dat, year = year) %>%
                                 dplyr::select(MONTH, year)
+
                 }, error = function(e) {
                         warning("invalid year: ", year)
                         return(NULL)
                 })
+
         })
 }
 
@@ -99,6 +103,7 @@ fars_read_years <- function(years) {
 fars_summarize_years <- function(years) {
         year <- MONTH <- n <- NULL
         dat_list <- fars_read_years(years)
+
         dplyr::bind_rows(dat_list) %>%
                 dplyr::group_by(year, MONTH) %>%
                 dplyr::summarize(n = dplyr::n()) %>%
@@ -116,7 +121,7 @@ fars_summarize_years <- function(years) {
 #' @param state.num a number representing the state of the US for which the plot will be produced
 #' @param year the year for which the data will be plotted
 #'
-#'  @return a plot of the state with points on it indicating the geographic coordinates of the fatalities registered in the year.
+#' @return a plot of the state with points on it indicating the geographic coordinates of the fatalities registered in the year.
 #'
 #' @importFrom maps map
 #' @importFrom dplyr filter

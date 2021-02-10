@@ -9,9 +9,10 @@ fars_map_state(state.num, year)
 \arguments{
 \item{state.num}{a number representing the state of the US for which the plot will be produced}
 
-\item{year}{the year for which the data will be plotted
-
- @return a plot of the state with points on it indicating the geographic coordinates of the fatalities registered in the year.}
+\item{year}{the year for which the data will be plotted}
+}
+\value{
+a plot of the state with points on it indicating the geographic coordinates of the fatalities registered in the year.
 }
 \description{
 This is a function that produces a plot of the locations where the fatalities occurred per year and state.
