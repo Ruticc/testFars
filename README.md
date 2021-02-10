@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/Ruticc/testFars.svg?branch=master)](https://travis-ci.org/Ruticc/testFars)
 <!-- badges: end -->
 
 The goal of testFars is to facilitate the use of FARS data for

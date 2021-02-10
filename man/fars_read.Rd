@@ -18,7 +18,3 @@ This is an internal simple function that reads a file when it exists and it conv
 \note{
 if the function is provided a filename that is not available it returns an error. One needs to be sure that one is in the right directory or that the provided filenames exist.
 }
-\examples{
-fars_read(\code{filename})
-
-}

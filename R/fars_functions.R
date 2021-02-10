@@ -11,8 +11,6 @@
 #' @importFrom dplyr tbl_df
 #' @importFrom readr read_csv
 #'
-#' @examples
-#'	fars_read(\code{filename})
 #'
 #' @note if the function is provided a filename that is not available it returns an error. One needs to be sure that one is in the right directory or that the provided filenames exist.
 
